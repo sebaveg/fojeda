@@ -1,0 +1,37 @@
+doctype html
+html
+  
+  include blocks/head.pug
+  
+  body  
+    
+    include blocks/header.pug
+    
+    section.ed-container.main-center
+      
+      form.ed-item.m-50.form-contacto
+        label(for="name") Nombre
+        input(type="text" id="name" placeholder="Ingrese su nombre" required)
+        label(for="tel") Telefono
+        input(type="text" id="tel" placeholder="Su telefono")
+        label(for="email") Correo
+        input(type="email" id="email" placeholder="Correo electrónico")
+        label(for="name") Mensaje
+        textarea(id="textarea" rows="10")
+      
+      aside.ed-item.m-40.aside-contacto
+        h2 Telefonos
+        ul
+          li
+            a(href="tel:+5492214217018") (0221) 421-7018
+          li
+            a(href="tel:+5492214824181") (0221) 482-4181
+          li
+            a(href="tel:+5492214217700") (0221) 421-7700
+        h2 Redes Sociales
+        ul.social-link
+          li: a(href="https://www.facebook.com/FarmaciaOjedaLP/").icon-facebook
+          li: a(href="https://www.instagram.com/farmaciaojedalp/").icon-instagram
+          li: a(href="https://twitter.com/sebaveg").icon-twitter
+    
+    include blocks/footer.pug

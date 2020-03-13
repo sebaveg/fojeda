@@ -1,0 +1,50 @@
+doctype html
+html(lang="es")
+  
+  include blocks/head.pug
+  
+  body  
+    
+    include blocks/header.pug
+
+
+    section
+      header.portada
+        .section_header
+          .ed-container.telefonos
+            h2.ed-item.main-center Telefonos: 421-7018 / 482-4181 / 421-7700
+        .ed-container
+          .turno.ed-item
+            h3 Proximo turno<br/>9 de Julio
+      
+      
+      .ed-container.main-distribute.ioma-pami
+        .ed-item.m-45.l-35.main-center.ioma
+          form
+            h2 IOMA meppes
+            label(for="meppes") Nº de pedido:<br/>
+            input(type="number" id="meppes" placeholder="Ingrese su número")
+            input(type="button" value="Consultar")
+          p.aclaracion Recuerde que el horario de meppes es hasta las 17hs
+        .ed-item.m-45.l-35.main-center.pami
+          form
+            h2 PAMI camoytes
+            label(for="camoytes") Nº de pedido<br/>
+            input(type="number" id="camoytes" placeholder="Ingrese su número")
+            input(type="button" value="Consultar")
+      
+      .ed-container.main-center
+        .ed-item.s-90.obras-sociales
+          h2 Obras sociales que atendemos
+          ul
+            - var list = ["Aca Salud","AMFFA","Banco Provincia","Casa","Dafuten","Galeno","Medife","Mutual Federada","Osmata","OSPE","OSPEPBA","OSPF","OSPIP","OSPLAO","OSPOCE","OSPRERA","OSAP","PAMI","IOMA","Poder Judicial","Prevencion ART","Provincia ART","OSSPRA","APRES","Luis Pasteur","Medicus","OMINT","OPDEA","OSDIPP","Swiss Medical","Whope","Sancor Salud","Integral San Andres","OMINT ART","Caja de Escribanos","Federacion Patronal ART","OSPFESIQYP","WTLYF","OSPIA","OSPIL AMPIL","OSSIMRA","Prevencion OSPIM","Recetario Solidario","SADIC","Experta ART","Experiencia ART","Caminos Protegidos ART","FAMYL","OSALARA","OSFATYLYF","Choferes de camiones","COMEI","Construir Salud","DIBA","Futbolistas","IOSE","Jerarquicos Salud","La segunda ART","OSDE","OSFA","Osmita","OSPACP","OSPERYHRA","OSSEG","Pasteleros","SADIC","SerueSalud","Socorros mutuos","Sind. de la carne","Policia Federal","ANDAR","Congreso","Fedecamaras","Femeba","Htal Britanico","Jubilados Telefonicos","OSTEL","OSA","OSDOP","Osjera","Ospedyc","Prev.Salud","Union personal"]
+            each item in list
+              li= item
+      
+      .ed-container.main-distribute.cajitas
+        img(src="img/estacionamiento.jpg").ed-item.s-70.m-30.l-20
+        img(src="img/gabinete.jpg").ed-item.s-70.m-30.l-20
+        img(src="img/laboratorio.jpg").ed-item.s-70.m-30.l-20
+        img(src="img/grupo-electrogeno.jpg").ed-item.s-70.m-30.l-20
+                
+    include blocks/footer.pug
